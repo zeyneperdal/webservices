@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-9"?>
+<PRICES>
+<BOOK>
+<TITLE>Data on the Web</TITLE>
+<PRICE>15.05$</PRICE>
+</BOOK>
+<BOOK>
+<TITLE>XML in Scotland</TITLE>
+<PRICE>12.50$</PRICE>
+</BOOK>
+<BOOK>
+<TITLE>Data Parsing Essentials</TITLE>
+<PRICE>9.99$</PRICE>
+</BOOK>
+</PRICES>
