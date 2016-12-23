@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<BOOKS>
+<BOOK YEAR="1999">
+<AUTHOR>Abiteboul</AUTHOR>
+<AUTHOR>Buneman</AUTHOR>
+<AUTHOR>Suciu</AUTHOR>
+<TITLE>Data on the Web</TITLE>
+<REVIEW>A <EM>fine</EM> book.</REVIEW>
+</BOOK>
+<BOOK YEAR="2002">
+<AUTHOR>Buneman</AUTHOR>
+<TITLE>XML in Scotland</TITLE>
+<REVIEW><EM>The <EM>best</EM> ever!</EM></REVIEW>
+</BOOK>
+<BOOK YEAR="2003">
+<AUTHOR>Kuntermann</AUTHOR>
+<AUTHOR>Lehmann</AUTHOR>
+<TITLE>Data Parsing Essentials</TITLE>
+<REVIEW>A <EM>nice</EM> source.</REVIEW>
+</BOOK>
+</BOOKS>
