@@ -12,8 +12,7 @@
 <!ELEMENT year_destroyed (#PCDATA)>
 <!ATTLIST year_destroyed era CDATA #IMPLIED>
 <!ELEMENT how_destroyed (#PCDATA)>
-<!ELEMENT story (para*)>
-<!ELEMENT para EMPTY>
+<!ELEMENT story (#PCDATA)>
 <!ELEMENT main_image EMPTY>
 <!ATTLIST main_image file CDATA #REQUIRED>
 <!ATTLIST main_image w CDATA #IMPLIED>
