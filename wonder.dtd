@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8">
+
+<!ELEMENT ancient_wonders(wonder)>
+<!ELEMENT wonder(name+,location,height,history,main_image,source)>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name language CDATA #REQUIRED>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT height units CDATA #IMPLIED>
+<!ELEMENT history(year_built*,year_destroyed*,how_destroyed*,story*)>
+<!ELEMENT year_built (#PCDATA)>
+<!ELEMENT year_built era CDATA #IMPLIED>
+<!ELEMENT year_destroyed (#PCDATA)>
+<!ELEMENT year_destroyed era CDATA #IMPLIED>
+<!ELEMENT how_destroyed (#PCDATA)>
+<!ELEMENT story(para*)>
+<!ELEMENT para EMPTY>
+<!ELEMENT main_image EMPTY>
+<!ATTLIST main_image file CDATA #REQUIRED>
+<!ATTLIST main_image w CDATA #IMPLIED>
+<!ATTLIST main_image h CDATA #IMPLIED>
+<!ELEMENT source EMPTY>
+<!ATTLIST source sectiond CDATA #IMPLIED>
+<!ATTLIST source newspaperid CDATA #IMPLIED>
