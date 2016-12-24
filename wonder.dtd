@@ -4,6 +4,7 @@
 <!ELEMENT name (#PCDATA)>
 <!ATTLIST name language CDATA #REQUIRED>
 <!ELEMENT location (#PCDATA)>
+<!ELEMENY height (#PCDATA)>
 <!ELEMENT height units CDATA #IMPLIED>
 <!ELEMENT history (year_built*,year_destroyed*,how_destroyed*,story*)>
 <!ELEMENT year_built (#PCDATA)>
