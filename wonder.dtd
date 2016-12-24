@@ -19,5 +19,5 @@
 <!ATTLIST main_image w CDATA #IMPLIED>
 <!ATTLIST main_image h CDATA #IMPLIED>
 <!ELEMENT source EMPTY>
-<!ATTLIST source sectiond CDATA #IMPLIED>
+<!ATTLIST source sectionid CDATA #IMPLIED>
 <!ATTLIST source newspaperid CDATA #IMPLIED>
