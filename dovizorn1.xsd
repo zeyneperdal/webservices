@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema id="currencies" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>This XML Schema will be used to validate the set of XML documents for TCMB Currency.</xs:documentation>
+  </xs:annotation>
+
+  <xs:simpleType name="CrossRateUSD_type">
+    <xs:restriction base="xs:double">
+      <xs:maxExclusive value="1000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="name_type">
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="Lang" type="xs:string"/>
+        </xs:extension>
+      </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:group name="below_info">
+    <xs:sequence>
+      <xs:element name="img" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute name="src" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:attributeGroup name="cur_att_group">
+    <xs:attribute name="CrossOrder" type="xs:int" use="required"/>
+    <xs:attribute name="Kod" type="xs:string" use="required"/>
+    <xs:attribute name="CurrencyCode" type="xs:string" use="required"/>
+    <xs:attribute name="CurrencyID" type="xs:string" use="optional" default="0"/>
+  </xs:attributeGroup>
+  
+  <xs:element name="Currencies">
+      <xs:complexType>
+        <xs:complexContent>
+          <xs:restriction base="xs:anyType">
+            <xs:sequence>
+              
+              <xs:element name="Currency">
+            
+                <xs:complexType>
+                  <xs:complexContent>
+                    <xs:restriction base="xs:anyType">
+                      <xs:sequence>
+
+                        <xs:element name="Unit">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:int">
+                              <xs:minExclusive value="0"/>
+                              <xs:maxExclusive value="1000"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:element>
+                
+                        <xs:element name="Name" type="name_type" />
+
+                        <xs:element name="ForexBuying">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:decimal">
+                              <xs:minInclusive value="0"/>
+                              <xs:maxInclusive value="1000"/>
+                              <xs:totalDigits value="10"/>
+                              <xs:fractionDigits value="6"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:element>
+
+                        <xs:element name="ForexSelling">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:double">
+                              <xs:pattern value="[0-9]+\.*[0-9]*"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:element>
+                
+                        <xs:element name="BanknoteBuying" type="xs:double"/>
+
+                        <xs:element name="BanknoteSelling">
+                          <xs:complexType>
+                            <xs:simpleContent>
+                              <xs:extension base="xs:double">
+                                <xs:attribute name="scope" type="xs:string"/>
+                              </xs:extension>
+                            </xs:simpleContent>
+                          </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="CrossRateUSD">
+                          <xs:simpleType>
+                            <xs:union memberTypes="xs:string CrossRateUSD_type"/>
+                          </xs:simpleType>
+                        </xs:element>
+
+                        <xs:element name="Country">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:enumeration value="Turkey" />
+                              <xs:enumeration value="USA" />
+                              <xs:enumeration value="UK" />
+                              <xs:enumeration value="France" />
+                              <xs:maxLength value="512" />
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:element>
+                
+                        <xs:element name="IsAlive" type="xs:boolean" fixed="true"/>
+
+                        <xs:element name="Date">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:date">
+                              <xs:minInclusive value="2000-01-01"/>
+                              <xs:maxInclusive value="2015-12-28"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:element>
+                
+                        <xs:element name="Time" type="xs:time"/>
+                        <xs:element name="DateTime" type="xs:dateTime"/>
+                        <xs:element name="Interval" type="xs:duration" default="P1D"/>
+                        <xs:element name="tribute_year" type="xs:gYear" default="1995"/>
+                        <xs:element name="birth_mont" type="xs:gMonth" default="--12"/>
+                        <xs:element name="leap_day" type="xs:gMonthDay" default="--02-29"/>
+                        <xs:element name="ides" type="xs:gDay" default="---15"/>
+
+                        <xs:element name="using_from">
+                          <xs:simpleType>
+                            <xs:list itemType="xs:string" />
+                          </xs:simpleType>
+                        </xs:element>
+
+                        <xs:element name="description">
+                          <xs:complexType>
+                            <xs:all>
+                              <xs:element name="title" type="xs:string" />
+                              <xs:element name="body" type="xs:string" />
+                            </xs:all>
+                          </xs:complexType>
+                        </xs:element>
+                        
+                        <xs:element name="history">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:choice minOccurs="1" maxOccurs="2">
+                                <xs:element name="title" type="xs:string" />
+                                <xs:sequence>
+                                  <xs:element name="body" type="xs:string" />
+                                </xs:sequence>
+                              </xs:choice>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="extra_info">
+                          <xs:complexType>
+                            <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                <xs:attribute name="id" type="xs:positiveInteger" />
+                              </xs:extension>
+                            </xs:simpleContent>
+                          </xs:complexType>
+                        </xs:element>
+
+
+                        <xs:element name="below_i">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:group ref="below_info"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        
+                      </xs:sequence>
+
+                      <xs:attributeGroup ref="cur_att_group"/>
+
+                      </xs:restriction>
+                  </xs:complexContent>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+
+            <xs:attribute name="Tarih" type="xs:date" use="required"/>
+            <xs:attribute name="Date" type="xs:date" use="required"/>
+            <xs:attribute name="Time" type="xs:time" use="optional" fixed="15:30:00"/>
+            <xs:attribute name="Bulten_No" type="xs:string" use="required"/>
+            
+          </xs:restriction>
+        </xs:complexContent>
+      </xs:complexType>
+  </xs:element>
+
+</xs:schema>
