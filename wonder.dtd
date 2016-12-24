@@ -6,7 +6,7 @@
 <!ELEMENT location (#PCDATA)>
 <!ELEMENT height (#PCDATA)>
 <!ATTLIST height units CDATA #IMPLIED>
-<!ELEMENT history (year_built*,year_destroyed*,how_destroyed*,story*)>
+<!ELEMENT history (year_built,year_destroyed,how_destroyed,story)>
 <!ELEMENT year_built (#PCDATA)>
 <!ATTLIST year_built era CDATA #IMPLIED>
 <!ELEMENT year_destroyed (#PCDATA)>
