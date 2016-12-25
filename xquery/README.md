@@ -1,3 +1,3 @@
-Answers of Web Services Questions..
+Answers of CME435 Web Services Questions..
 <hr>
-Web Servis Sorularının Cevapları..
+CME435 Web Servis Sorularının Cevapları..
