@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="simple_types">
+		<xs:complexType>
+			<xs:sequence>
+
+				<!-- ** XML2e ** -->
+				<!-- to follow the book's example, see the section below -->
+				<xs:element name="total_bases">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:maxExclusive value="6856"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

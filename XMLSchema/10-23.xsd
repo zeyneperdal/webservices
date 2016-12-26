@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- ** XML2e ** -->
+	<!-- to follow the book's example, see the section below -->
+	<xs:simpleType name="story_type">
+		<xs:restriction base="xs:string">
+			<xs:length value="1024"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="simple_types">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="story" type="story_type"/>
+				<xs:element name="summary" type="story_type"/>
+				<xs:element name="another_story" type="story_type"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
