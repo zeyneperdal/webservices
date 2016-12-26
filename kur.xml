@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-9"?>
+<?xml-stylesheet type="text/xsl" href="kur2.xsl"?>
+
+<!DOCTYPE piyasa [
+<!ELEMENT piyasa (doviz+)>
+<!ELEMENT doviz (isim+, alis, satis)>
+<!ELEMENT isim (#PCDATA)>
+	<!ATTLIST isim type CDATA #REQUIRED>
+<!ELEMENT alis (#PCDATA)>
+<!ELEMENT satis (#PCDATA)>
+]>
+
+<piyasa>	
+	<doviz>
+		<isim type="normal">Euro</isim>
+		<isim type="short">EUR</isim>
+		<alis>2.7146</alis>
+		<satis>2.7294</satis>
+	</doviz>
+	<doviz>
+		<isim type="normal">Dolar</isim>
+		<isim type="short">USD</isim>
+		<alis>2.0152</alis>
+		<satis>2.0215</satis>
+	</doviz>
+	<doviz>
+		<isim type="normal">Sterlin</isim>
+		<isim type="short">STE</isim>
+		<alis>2.9811</alis>
+		<satis>0</satis>
+	</doviz>
+	<doviz>
+		<isim type="normal">Riyal</isim>
+		<isim type="short">SAR</isim>
+		<alis>0.7146</alis>
+		<satis>0.7189</satis>
+	</doviz>
+</piyasa>

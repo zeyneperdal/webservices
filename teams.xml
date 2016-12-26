@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-9"?>
+<tournament>
+   <team id="tm01">
+      <trainer>Vural, Yilmaz</trainer>
+      <name>Adana Demirspor</name>      <city>Adana</city>
+      <value type="TRY" quantity="million">160</value>
+      <f_date>1962</f_date>
+   </team>
+   <team id="tm02">
+      <trainer>Mourinho, Jose</trainer>
+      <name>Manchester United</name>      <city>Manchester</city>
+      <value type="EUR" quantity="million">870</value>
+      <f_date>1878</f_date>
+   </team>
+   <team id="tm03">
+      <trainer>Güneş, Şenol</trainer>
+      <name>Beşiktaş</name>      <city>İstanbul</city>
+      <value type="EUR" quantity="million">265</value>
+      <f_date>1903</f_date>
+   </team>
+</tournament>
