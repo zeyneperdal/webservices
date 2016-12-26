@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<element name="wonder">
+  <complexType>
+    <sequence>
+      <element name="name" type="string"/>
+      <element name="location" type="string"/>
+      <element name="height" type="string"/>
+    </sequence>
+  </complexType>
+</element>
