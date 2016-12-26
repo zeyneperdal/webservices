@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ancient_wonders">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="wonder" type="wonderType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="wonderType">
+		<xs:sequence>
+			<xs:element name="name" type="nameType" maxOccurs="unbounded"/>
+			<xs:element name="location" type="xs:string"/>
+			<xs:element name="height" type="heightType"/>
+			<xs:element name="history" type="historyType"/>
+			<xs:element name="main_image" type="imageType"/>
+			<xs:element name="source" type="sourceType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nameType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="language" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="heightType">
+		<xs:simpleContent>
+			<xs:extension base="xs:nonNegativeInteger">
+				<xs:attribute name="units" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="historyType">
+		<xs:sequence>
+			<xs:element name="year_built" type="yearType"/>
+			<xs:element name="year_destroyed" type="yearType" minOccurs="0"/>
+			<xs:element name="how_destroyed" type="destrType" minOccurs="0"/>
+			<xs:element name="story" type="storyType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yearType">
+		<xs:simpleContent>
+			<xs:extension base="xs:positiveInteger">
+				<xs:attribute name="era" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="destrType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="earthquake"/>
+			<xs:enumeration value="fire"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="storyType" mixed="true">
+		<xs:sequence>
+			<xs:element name="para" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType/>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="imageType">
+		<xs:attribute name="file" type="xs:anyURI" use="required"/>
+		<xs:attribute name="w" type="xs:positiveInteger" use="required"/>
+		<xs:attribute name="h" type="xs:positiveInteger" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="sourceType">
+		<xs:attribute name="sectionid" type="xs:positiveInteger" use="required"/>
+		<xs:attribute name="newspaperid" type="xs:positiveInteger" use="required"/>
+	</xs:complexType>
+</xs:schema>
