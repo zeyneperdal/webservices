@@ -1,0 +1,38 @@
+<!ELEMENT ancient_wonders (wonder+)>
+
+<!-- ** XML2e ** -->
+<!-- to follow the book's example, see this and the section below -->
+<!ELEMENT wonder (w_visit, name+, location, height, history, main_image, source*)>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+		language CDATA #REQUIRED>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT height (#PCDATA)>
+<!ATTLIST height
+		units CDATA #REQUIRED>
+<!ELEMENT history (year_built, year_destroyed?, how_destroyed?, story)>
+<!ELEMENT year_built (#PCDATA)>
+<!ATTLIST year_built
+		era (BC | AD) #REQUIRED>
+<!ELEMENT year_destroyed (#PCDATA)>
+<!ATTLIST year_destroyed
+		era (BC | AD) #REQUIRED>
+<!ELEMENT how_destroyed (#PCDATA)>
+<!ELEMENT story (#PCDATA | para)*>
+<!ELEMENT para EMPTY>
+<!ELEMENT main_image EMPTY>
+<!ATTLIST main_image
+		file CDATA #REQUIRED
+		h CDATA #REQUIRED
+		w CDATA #REQUIRED>
+<!ELEMENT source EMPTY>
+<!ATTLIST source
+		sectionid CDATA #REQUIRED
+		newspaperid CDATA #REQUIRED>
+
+
+<!-- ** XML2e ** -->
+<!-- to follow the book's example, see the section below -->
+<!ELEMENT w_visit EMPTY>
+<!ATTLIST w_visit
+		 primary_keyword NMTOKEN #REQUIRED>

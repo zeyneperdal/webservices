@@ -1,0 +1,5 @@
+<!ELEMENT wonder (name, location, height)>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT height (#PCDATA)>

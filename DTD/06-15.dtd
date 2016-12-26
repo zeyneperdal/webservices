@@ -1,0 +1,34 @@
+<!-- ** XML2e ** -->
+<!-- to follow the book's example, see the section below -->
+<!ELEMENT history ((year_built, year_destroyed, how_destroyed, story) | (year_built, story))>
+
+<!ELEMENT ancient_wonders (wonder+)>
+<!ELEMENT wonder (name+, location, height, history, main_image, source*)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT height (#PCDATA)>
+<!ELEMENT year_built (#PCDATA)>
+<!ELEMENT year_destroyed (#PCDATA)>
+<!ELEMENT how_destroyed (#PCDATA)>
+<!ELEMENT story (#PCDATA)>
+<!ELEMENT main_image EMPTY>
+<!ELEMENT source EMPTY>
+
+<!-- ** XML2e ** -->
+<!-- this section is required for the XML to be valid and will be discussed later in the chapter -->
+<!-- DTDs don't require elements and attributes to be declared in any specific order -->
+<!ATTLIST name
+          language CDATA #REQUIRED>
+ <!ATTLIST height
+          units CDATA #REQUIRED>
+<!ATTLIST year_built
+          era CDATA #REQUIRED>
+<!ATTLIST year_destroyed
+          era CDATA #REQUIRED>
+<!ATTLIST main_image
+          file CDATA #REQUIRED
+          w CDATA #REQUIRED
+          h CDATA #REQUIRED>
+<!ATTLIST source
+          sectionid CDATA #REQUIRED
+          newspaperid CDATA #REQUIRED>

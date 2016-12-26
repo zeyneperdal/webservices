@@ -1,0 +1,24 @@
+<!-- ** XML2e ** -->
+<!-- to follow the book's example, see the section below -->
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT height (#PCDATA)>
+<!ELEMENT year_built (#PCDATA)>
+<!ELEMENT year_destroyed (#PCDATA)>
+<!ELEMENT how_destroyed (#PCDATA)>
+<!ELEMENT story (#PCDATA)>
+
+<!-- ** XML2e ** -->
+<!-- this section is required for the XML to be valid and will be discussed later in the chapter -->
+<!-- DTDs don't require elements and attributes to be declared in any specific order -->
+<!ELEMENT ancient_wonders (wonder)>
+<!ELEMENT wonder (name+, location, height, history)>
+<!ATTLIST name
+          language CDATA #REQUIRED>
+ <!ATTLIST height
+          units CDATA #REQUIRED>
+<!ELEMENT history (year_built, year_destroyed, how_destroyed, story)>
+<!ATTLIST year_built
+          era CDATA #REQUIRED>
+<!ATTLIST year_destroyed
+          era CDATA #REQUIRED>

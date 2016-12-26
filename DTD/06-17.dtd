@@ -1,0 +1,8 @@
+<!ELEMENT ancient_wonders (wonder+)>
+<!ELEMENT wonder (#PCDATA | name | location | city | country)*>
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT location ANY>
+
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>

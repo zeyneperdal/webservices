@@ -1,0 +1,10 @@
+<!ELEMENT ancient_wonders (wonder+)>
+
+<!-- ** XML2e ** -->
+<!-- to follow the book's example, see the section below -->
+<!ELEMENT wonder (#PCDATA | name | location | city | country)*>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT country (#PCDATA)>

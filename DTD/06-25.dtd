@@ -1,0 +1,7 @@
+<!ELEMENT wonder (height*)>
+
+<!-- ** XML2e ** -->
+<!-- to follow the book's example, see the section below -->
+<!ELEMENT height (#PCDATA)>
+<!ATTLIST height
+          units CDATA #FIXED "feet">

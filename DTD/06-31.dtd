@@ -1,0 +1,18 @@
+<!ELEMENT ancient_wonders (wonder+, resources+)>
+<!ELEMENT wonder (name)>
+<!ATTLIST wonder
+          code ID #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+          language CDATA #REQUIRED>
+          
+<!ELEMENT resources (special_site+)>
+
+<!-- ** XML2e ** -->
+<!-- to follow the book's example, see the section below -->
+<!ELEMENT special_site (title, url)>
+<!ATTLIST special_site
+          wonder_focus IDREF #REQUIRED>
+          
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT url (#PCDATA)>

@@ -1,0 +1,11 @@
+<!ELEMENT ancient_wonders (wonder+)>
+
+<!-- ** XML2e ** -->
+<!-- to follow the book's example, see the section below -->
+<!ELEMENT wonder (name)>
+<!ATTLIST wonder
+          code ID #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+          language CDATA #REQUIRED>
