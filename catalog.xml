@@ -11,6 +11,8 @@
 			<stock>0</stock>
 		</size>
 	</product>
-	<product description="Mohican Jeans" gender="Men"></product>
+	<product description="Mohican Jeans" gender="Men">
+	<barcode>QZ5671</barcode>
+	</product>
 	<product description="Soft Blouse" gender="Women"></product>
 </catalog>
