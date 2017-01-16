@@ -12,7 +12,15 @@
 		</size>
 	</product>
 	<product description="Mohican Jeans" gender="Men">
-
+<barcode>QWZ5471</barcode>
+		<price type="EUR">31.95</price>
+		<price type="USD">39.10</price>
+		<size description="Small">
+			<stock>10</stock>
+		</size>
+		<size description="XLarge">
+			<stock>2</stock>
+		</size>
 	</product>
 	<product description="Soft Blouse" gender="Women"></product>
 </catalog>
