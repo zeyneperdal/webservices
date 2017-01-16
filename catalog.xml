@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<catalog>
+	<product description="Cardigan Sweater" gender="Men">
+		<barcode>QWZ5671</barcode>
+		<price type="EUR">33.95</price>
+		<price type="USD">36.10</price>
+		<size description="Medium">
+			<stock>8</stock>
+		</size>
+		<size description="Large">
+			<stock>0</stock>
+		</size>
+	</product>
+	<product description="Mohican Jeans" gender="Men"></product>
+	<product description="Soft Blouse" gender="Women"></product>
+</catalog>
